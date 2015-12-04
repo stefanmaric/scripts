@@ -10,6 +10,11 @@
     first(input)
   )
 
+  console.log(
+    'Day03/second:',
+    second(input)
+  )
+
   function moveSanta (coords, houses, command) {
     switch (command) {
       case '^':
@@ -35,6 +40,17 @@
       return data
     }, {
       coords: { x: 0, y: 0 }, houses: { '0,0': 1 }
+    })
+
+    return Object.keys(result.houses).length
+  }
+
+  function second (input) {
+    let result = input.split('').reduce((data, command, i) => {
+      moveSanta(i % 2 ? data.robot : data.santa, data.houses, command)
+      return data
+    }, {
+      santa: { x: 0, y: 0 }, robot: { x: 0, y: 0 }, houses: { '0,0': 2 }
     })
 
     return Object.keys(result.houses).length
