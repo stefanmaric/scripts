@@ -15,6 +15,11 @@
       'Day04/first:',
       first(input)
     )
+
+    console.log(
+      'Day04/second:',
+      second(input)
+    )
   })
 
   function getScript (url, callback) {
@@ -30,6 +35,10 @@
 
   function first (input) {
     return getFirstMatch(input, /^0{5}/)
+  }
+
+  function second (input) {
+    return getFirstMatch(input, /^0{6}/)
   }
 
   function getFirstMatch (secret, regex) {
