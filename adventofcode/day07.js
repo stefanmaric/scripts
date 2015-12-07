@@ -10,6 +10,11 @@
     first(input)
   )
 
+  console.log(
+    'Day07/second:',
+    second(input)
+  )
+
   function first (input, wires = {}) {
     /*
      *    /^([\da-z]+)? ?(?:([A-Z]+) ([\da-z]+) )?-> ([a-z]+)$/
@@ -76,5 +81,10 @@
 
     // Puzzle asks for value of `a`
     return wires.a
+  }
+
+  function second (input) {
+    // Puzzle asks overwrite value of `b` with result of previous puzzle
+    return first(input, { b: first(input) })
   }
 }())
