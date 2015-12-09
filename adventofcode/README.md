@@ -3,7 +3,7 @@ Advent Of Code solutions
 
 [adventofcode.com](http://adventofcode.com/) is a series of general programming puzzles crated by [Eric Wastl](https://twitter.com/ericwastl) that are being released one by day since Dec-01 2015, until Dec 25 (I guess).
 
-I'm solving them all with no more than the Web Console and Javascript. I'm trying to use ES2015 features and as much functional programming as I can, while keeping the code as readable as I can.
+I'm solving them all with no more than the Web Console and Javascript. I'm trying to use ES2015 features and as much functional programming as I can, while keeping the code readable.
 
 ## Run them
 
