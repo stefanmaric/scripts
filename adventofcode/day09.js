@@ -10,8 +10,17 @@
     first(input)
   )
 
+  console.log(
+    'Day09/second:',
+    second(input)
+  )
+
   function first (input) {
     return getRouteDistances(input)[0]
+  }
+
+  function second (input) {
+    return getRouteDistances(input).pop()
   }
 
   function getRouteDistances (input) {
