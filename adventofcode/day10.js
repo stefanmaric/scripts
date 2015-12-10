@@ -10,8 +10,17 @@
     first(input)
   )
 
+  console.log(
+    'Day09/second:',
+    second(input)
+  )
+
   function first (input) {
     return Array(40).fill().reduce(lookAndSay, input).length
+  }
+
+  function second (input) {
+    return Array(50).fill().reduce(lookAndSay, input).length
   }
 
   function lookAndSay (input) {
