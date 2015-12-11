@@ -10,9 +10,18 @@
     first(input)
   )
 
+  console.log(
+    'Day11/second:',
+    second(input)
+  )
+
   function first (input) {
     while (!passwordCheck(input)) input = incrementAlpha(input)
     return input
+  }
+
+  function second (input) {
+    return first(incrementAlpha(first(input)))
   }
 
   function passwordCheck (password) {
