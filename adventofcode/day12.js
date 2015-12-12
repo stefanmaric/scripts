@@ -10,7 +10,29 @@
     first(input)
   )
 
+  console.log(
+    'Day12/second:',
+    second(input)
+  )
+
   function first (input) {
     return input.match(/-?\d+/g).reduce((a, b) => +a + +b)
+  }
+
+  function second (input) {
+    return first(JSON.stringify(JSON.parse(input), replacer))
+  }
+
+  function replacer (key, val) {
+    if (isObject(this[key]) && hasVal(this[key], 'red')) return
+    return val
+  }
+
+  function hasVal (obj, val) {
+    return Object.keys(obj).some(e => obj[e] === val)
+  }
+
+  function isObject (obj) {
+    return (!!obj) && (obj.constructor === Object)
   }
 }())
