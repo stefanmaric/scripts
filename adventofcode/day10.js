@@ -6,12 +6,12 @@
   let input = document.querySelector('.puzzle-input').textContent
 
   console.log(
-    'Day09/first:',
+    'Day10/first:',
     first(input)
   )
 
   console.log(
-    'Day09/second:',
+    'Day10/second:',
     second(input)
   )
 
