@@ -17,7 +17,7 @@
   }
 
   function lookAndSay (input) {
-    let ex = /(\d)\1*/g
-    return input.match(ex).map(el => el.length + el[0]).join('')
+    const extractor = /(\d)\1*/g
+    return input.match(extractor).map(el => el.length + el[0]).join('')
   }
 }())
