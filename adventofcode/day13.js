@@ -10,11 +10,33 @@
     first(input)
   )
 
+  console.log(
+    'Day13/second:',
+    second(input)
+  )
+
   function first (input) {
     let pairs = getPairs(input)
     let persons = getPersons(pairs)
     let relations = getRelations(pairs)
     let permutations = permute(persons)
+
+    return permutations.map(arrangement => {
+      return calculateHappiness(arrangement, relations)
+    }).sort((a, b) => b > a)[0]
+  }
+
+  function second (input) {
+    let pairs = getPairs(input)
+    let persons = getPersons(pairs)
+
+    let relations = getRelations([...pairs, ...persons.reduce((a, person) => {
+      a.push([ 'myself', person, 0 ])
+      a.push([ person, 'myself', 0 ])
+      return a
+    }, [])])
+
+    let permutations = permute([...persons, 'myself'])
 
     return permutations.map(arrangement => {
       return calculateHappiness(arrangement, relations)
