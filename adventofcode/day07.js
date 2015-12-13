@@ -25,9 +25,9 @@
      *                       NOT     fv           ->   bd
      */
 
-    let extractor = /^([\da-z]+)? ?(?:([A-Z]+) ([\da-z]+) )?-> ([a-z]+)$/
+    const extractor = /^([\da-z]+)? ?(?:([A-Z]+) ([\da-z]+) )?-> ([a-z]+)$/
 
-    let gates = {
+    const gates = {
       'AND': (a, b) => a & b,
       'OR': (a, b) => a | b,
       'NOT': (a, b) => b ^ 65535,
