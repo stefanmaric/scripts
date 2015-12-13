@@ -7,8 +7,8 @@
 
 ;(function () {
   /* global md5 */
+  const md5Url = 'https://raw.githubusercontent.com/AndreasPizsa/md5-jkmyers/master/md5.min.js'
   let input = document.querySelector('.puzzle-input').textContent
-  let md5Url = 'https://raw.githubusercontent.com/AndreasPizsa/md5-jkmyers/master/md5.min.js'
 
   getScript(md5Url, function () {
     console.log('Day04/first:', first(input))
