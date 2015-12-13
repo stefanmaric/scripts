@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('.puzzle-input').textContent
 
-  console.log(
-    'Day10/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day10/second:',
-    second(input)
-  )
+  console.log('Day10/first:', first(input))
+  console.log('Day10/second:', second(input))
 
   function first (input) {
     return Array(40).fill().reduce(lookAndSay, input).length

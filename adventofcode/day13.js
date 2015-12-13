@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent.slice(0, -1)
 
-  console.log(
-    'Day13/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day13/second:',
-    second(input)
-  )
+  console.log('Day13/first:', first(input))
+  console.log('Day13/second:', second(input))
 
   function first (input) {
     let pairs = getPairs(input)

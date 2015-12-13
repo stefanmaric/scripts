@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent.slice(0, -1)
 
-  console.log(
-    'Day08/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day08/second:',
-    second(input)
-  )
+  console.log('Day08/first:', first(input))
+  console.log('Day08/second:', second(input))
 
   function first (input) {
     let original = input.split('\n').join('')

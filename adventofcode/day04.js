@@ -11,15 +11,8 @@
   let md5Url = 'https://raw.githubusercontent.com/AndreasPizsa/md5-jkmyers/master/md5.min.js'
 
   getScript(md5Url, function () {
-    console.log(
-      'Day04/first:',
-      first(input)
-    )
-
-    console.log(
-      'Day04/second:',
-      second(input)
-    )
+    console.log('Day04/first:', first(input))
+    console.log('Day04/second:', second(input))
   })
 
   function getScript (url, callback) {

@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent.slice(0, -1)
 
-  console.log(
-    'Day07/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day07/second:',
-    second(input)
-  )
+  console.log('Day07/first:', first(input))
+  console.log('Day07/second:', second(input))
 
   function first (input, wires = {}) {
     /*

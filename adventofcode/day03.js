@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent
 
-  console.log(
-    'Day03/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day03/second:',
-    second(input)
-  )
+  console.log('Day03/first:', first(input))
+  console.log('Day03/second:', second(input))
 
   function moveSanta (coords, houses, command) {
     switch (command) {

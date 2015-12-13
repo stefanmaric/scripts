@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('.puzzle-input').textContent
 
-  console.log(
-    'Day11/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day11/second:',
-    second(input)
-  )
+  console.log('Day11/first:', first(input))
+  console.log('Day11/second:', second(input))
 
   function first (input) {
     while (!passwordCheck(input)) input = incrementAlpha(input)

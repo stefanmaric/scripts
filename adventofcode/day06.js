@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent.slice(0, -1)
 
-  console.log(
-    'Day06/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day06/second:',
-    second(input)
-  )
+  console.log('Day06/first:', first(input))
+  console.log('Day06/second:', second(input))
 
   function fillMatrix (matrix, fillWith, from, to) {
     let fn = (typeof fillWith === 'function') ? fillWith : () => fillWith

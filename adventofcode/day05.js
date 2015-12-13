@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent.slice(0, -1)
 
-  console.log(
-    'Day05/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day05/second:',
-    second(input)
-  )
+  console.log('Day05/first:', first(input))
+  console.log('Day05/second:', second(input))
 
   function testAll (input, rules) {
     return rules.every(regex => regex.test(input))

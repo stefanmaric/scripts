@@ -5,15 +5,8 @@
 ;(function () {
   let input = document.querySelector('pre').textContent
 
-  console.log(
-    'Day01/first:',
-    first(input)
-  )
-
-  console.log(
-    'Day01/second:',
-    second(input)
-  )
+  console.log('Day01/first:', first(input))
+  console.log('Day01/second:', second(input))
 
   function first (input) {
     return input.match(/\(/g).length - input.match(/\)/g).length
