@@ -24,7 +24,7 @@
         break
     }
 
-    houses[coords.x + ',' + coords.y] = houses[coords.x + ',' + coords.y] + 1 || 1
+    houses[`${coords.x},${coords.y}`] = houses[`${coords.x},${coords.y}`] + 1 || 1
   }
 
   function first (input) {
@@ -40,7 +40,7 @@
 
   function second (input) {
     let result = input.split('').reduce((data, command, i) => {
-      moveSanta(i % 2 ? data.robot : data.santa, data.houses, command)
+      moveSanta(data[i % 2 ? 'robot' : 'santa'], data.houses, command)
       return data
     }, {
       santa: { x: 0, y: 0 }, robot: { x: 0, y: 0 }, houses: { '0,0': 2 }
