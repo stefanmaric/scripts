@@ -31,14 +31,20 @@
   }
 
   function incrementAlpha (input) {
-    return hexavigesimalToAlpha((parseInt(alphaToHexavigesimal(input), 26) + 1).toString(26))
+    return hexavigesimalToAlpha(
+      (parseInt(alphaToHexavigesimal(input), 26) + 1
+    ).toString(26))
   }
 
   function alphaToHexavigesimal (s) {
-    return s.match(/\w/g).map(el => (el.charCodeAt() - 97).toString(26)).join('')
+    return s.match(/\w/g)
+      .map(el => (el.charCodeAt() - 97).toString(26))
+      .join('')
   }
 
   function hexavigesimalToAlpha (s) {
-    return s.match(/\w/g).map(el => String.fromCharCode(parseInt(el, 26) + 97)).join('')
+    return s.match(/\w/g)
+      .map(el => String.fromCharCode(parseInt(el, 26) + 97))
+      .join('')
   }
 }())
