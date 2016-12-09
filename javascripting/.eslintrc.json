@@ -1,0 +1,7 @@
+{
+  "plugins": ["standard"],
+  "extends": ["standard"],
+  "globals": {
+    "console": false
+  }
+}
