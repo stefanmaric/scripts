@@ -1,0 +1,23 @@
+{
+  "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
+  "description": "My solutions to javascript30.com exercises",
+  "keywords": [
+    "javascript",
+    "javascript30"
+  ],
+  "license": "MIT",
+  "main": "index.html",
+  "name": "javascript30",
+  "scripts": {
+    "test": "eslint .",
+    "start": "browser-sync start --server --files *"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "eslint": "^3.12.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
