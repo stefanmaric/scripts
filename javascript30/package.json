@@ -1,6 +1,12 @@
 {
   "author": "Stefan Maric <me@stefanmaric.com> (http://stefanmaric.com)",
   "description": "My solutions to javascript30.com exercises",
+  "echint": {
+    "ignore": [
+      "node_modules/**",
+      "**/*.wav"
+    ]
+  },
   "keywords": [
     "javascript",
     "javascript30"
@@ -9,15 +15,18 @@
   "main": "index.html",
   "name": "javascript30",
   "scripts": {
-    "test": "eslint .",
+    "test": "echint && eslint .",
     "start": "browser-sync start --server --files *"
   },
   "version": "1.0.0",
   "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "eslint": "^3.12.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "browser-sync": "^2.18.8",
+    "echint": "^4.0.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
