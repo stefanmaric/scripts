@@ -1,0 +1,122 @@
+:root {
+  --app-accent-color: red;
+  --app-background-color: #111;
+
+  --clock-background-color: transparent;
+  --clock-border-color: #fff;
+  --clock-border-radius: 50%;
+  --clock-border-style: solid;
+  --clock-border-width: calc(var(--clock-size) / 2 * .02);
+  --clock-size: 60vmin;
+
+  --hand-border-radius: 100% / 5%;
+
+  --hand-hour-color: #fff;
+  --hand-hour-length: calc(var(--clock-size) / 2 * .6);
+  --hand-hour-width: calc(var(--clock-size) * .02);
+
+  --hand-minute-color: #fff;
+  --hand-minute-length: calc(var(--clock-size) / 2 * .8);
+  --hand-minute-width: calc(var(--clock-size) * .01);
+
+  --hand-second-color: var(--app-accent-color);
+  --hand-second-length: calc(var(--clock-size) / 2 * .9);
+  --hand-second-width: calc(var(--clock-size) * .005);
+
+  --mark-padding: 1%;
+
+  --mark-fifth-color: #fff;
+  --mark-fifth-length: 2%;
+  --mark-fifth-width: calc(var(--clock-size) * .005);
+
+  --mark-regular-color: #fff;
+  --mark-regular-length: 1%;
+  --mark-regular-width: calc(var(--clock-size) * .0025);
+}
+
+#app {
+  align-items: center;
+  background-color: var(--app-background-color);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.analog-clock {
+  background-color: var(--clock-background-color);
+  border-radius: var(--clock-border-radius);
+  border: var(--clock-border-width) var(--clock-border-style) var(--clock-border-color);
+  height: var(--clock-size);
+  position: relative;
+  width: var(--clock-size);
+}
+
+.analog-clock > .hand {
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transition: all 100ms cubic-bezier(.47,.47,.35,2.32) 0s;
+  width: 0;
+}
+
+.analog-clock > .mark {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0%;
+  transform-origin: 50% 50%;
+  width: 0;
+}
+
+.analog-clock > .mark::before,
+.analog-clock > .mark::after {
+  background-color: var(--mark-regular-color);
+  content: " ";
+  display: block;
+  height: var(--mark-regular-length);
+  position: absolute;
+  transform: translateX(-50%);
+  width: var(--mark-fifth-width);
+}
+
+.analog-clock > .mark::before {
+  top: var(--mark-padding);
+}
+
+.analog-clock > .mark::after {
+  bottom: var(--mark-padding);
+}
+
+.analog-clock > .mark.fifth::before,
+.analog-clock > .mark.fifth::after {
+  background-color: var(--mark-fifth-color);
+  height: var(--mark-fifth-length);
+  width: var(--mark-fifth-width);
+}
+
+.analog-clock > .hand::before {
+  content: " ";
+  display: block;
+  transform-origin: 50% 0;
+  border-radius: var(--hand-border-radius);
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.analog-clock > .hand.second::before {
+  background-color: var(--app-accent-color);
+  height: var(--hand-second-length);
+  width: var(--hand-second-width);
+}
+
+.analog-clock > .hand.minute::before {
+  background-color: var(--hand-minute-color);
+  height: var(--hand-minute-length);
+  width: var(--hand-minute-width);
+}
+
+.analog-clock > .hand.hour::before {
+  background-color: var(--hand-hour-color);
+  height: var(--hand-hour-length);
+  width: var(--hand-hour-width);
+}
